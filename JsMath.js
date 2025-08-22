@@ -56,6 +56,37 @@ const JsMath = {
             return parseInt(x)
         }
         return TypeError
+    },
+
+    sqrt : function(x){
+        if(typeof x === 'number'){
+            return x **(1/2)
+        }
+        return TypeError
+    },
+
+    cbrt : function(x){
+        if(typeof x === 'number'){
+            return x **(1/3)
+        }
+        return TypeError
+    },
+
+    pow : function(x, y){
+        if(typeof x === 'number' && typeof y === 'number'){
+            return x**y
+        }
+        return TypeError
+    },
+    hypot : function(...args){
+        let sum = 0;
+        for(item of args){
+            if(typeof item === 'number'){
+                sum += item**2
+            }
+            return TypeError
+        }
+        return this.sqrt(sum)
     }
 
 }
