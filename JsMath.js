@@ -78,6 +78,7 @@ const JsMath = {
         }
         return TypeError
     },
+
     hypot : function(...args){
         let sum = 0;
         for(item of args){
@@ -87,7 +88,9 @@ const JsMath = {
             return TypeError
         }
         return this.sqrt(sum)
-    }
+    },
+
+    
 
 }
 console.table(JsMath)
