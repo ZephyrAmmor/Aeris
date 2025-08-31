@@ -44,13 +44,19 @@ gives parallelogram, `(())` gives circle, `> ]` asymmetric shape
 ```
 
 ```mermaid
-    graph LR
+    graph TD
         A(Start) -->B{if x = 1}
-        B -- Yes -->C[Print 1]
+        B -- Yes -->C[Print 1]-->I
         B -- No -->E{else if x = 2}
-        E -- Yes -->F[Print 2]
+        E -- Yes -->F[Print 2]-->I
         E -- No -->G{else if x = 3}
-        G -- Yes -->H[Print 3]
-        H -- No -->I(End)
+        G -- Yes -->H[Print 3]-->I
+        G -- No -->I(End)
 
+```
+```mermaid
+    graph TD
+        A(Start) --> B{if x % 2 = 0}
+        B -- Yes --> C[Even] -->F[End]
+        C -- No --> E[Odd] -->G[End]
 ```
