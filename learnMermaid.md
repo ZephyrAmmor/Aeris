@@ -60,3 +60,14 @@ gives parallelogram, `(())` gives circle, `> ]` asymmetric shape
         B -- Yes --> C[Even] -->F[End]
         C -- No --> E[Odd] -->G[End]
 ```
+
+```mermaid
+    graph TD
+        A(Start) --> B{if x = 1}
+        B -- Yes --> C[Print 1] --> Z[Continue]
+        B -- No --> D{else if x = 2}
+        D -- Yes --> E[Print 2] --> Z
+        E -- No --> F{else if x = 3}
+        F -- Yes --> G[Print 3] --> Z
+        F -- No --> Z --> H(End)
+```
