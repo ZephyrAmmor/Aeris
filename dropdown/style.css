@@ -1,0 +1,17 @@
+.hidden {
+    display : none;
+}
+.drop-down:focus{
+    outline : none;
+}
+.drop-down {
+    width : fit-content
+}
+.drop-down-item{
+    margin-top : 1px;
+    cursor : pointer;
+    padding : 1px 0.5rem;
+}
+.active{
+    background-color: rgba(128,128,128,0.08);
+}
