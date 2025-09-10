@@ -47,6 +47,8 @@ countryInput.addEventListener('input', () => {
 
 postalCode.addEventListener('input', () => {
     if (postalCodeIsValid()) {
+        postalCode.classList.remove('invalid')
+        postalCode.classList.add('valid')
         postalError.textContent = ''
         postalError.className = 'error'
     } else {
@@ -94,6 +96,8 @@ function showPostalError () {
         postalError.textContent = 'Postal code should not be empty'
     } else if (!postalCodeIsValid()) {
         postalError.textContent = 'Choose the right country or recheck your postal code'
+        postalCode.classList.add('invalid')
+        postalCode.classList.remove('valid')
     }
     postalError.className = 'error active'
 }
@@ -111,6 +115,7 @@ function showConfirmError () {
         confirmError.textContent = 'You must Re Enter password.'
     } else if (confirmInput.value !== passwordInput.value) {
         confirmError.textContent = "Both passwords don't match"
+        confirmInput.classList.replace('valid', 'invalid')
     } else if (confirmInput.validity.tooShort) {
         confirmError.textContent = `Password is too short`
     }
