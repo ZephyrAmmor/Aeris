@@ -1,21 +1,24 @@
 * {
     box-sizing: border-box;
 }
+body {
+    background-color: transparent;
+}
 .clock-holder{
+    margin : auto;
     width : fit-content;
 }
 .curly-clock {
     padding : 4rem;
     position : relative;
-    background-color : rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(4px);
     padding : 1rem;
 }
 .clock {
   /* Style your clock container */
   position: relative;
-  width: 260px;
-  height: 260px;
+  width: 270px;
+  height: 270px;
   background-color: rgb(41, 37, 32);
   border-radius: 50%;
 }
@@ -38,7 +41,7 @@
 }
 
 .hour-hand {
-  outline : 5px solid limegreen;
+  outline : 5px solid rgb(32, 171, 32);
   border-radius: 2rem 0rem 1rem 1rem;
   width: 0.75rem;
   height: 34%;
@@ -48,7 +51,7 @@
 .min-hand {
   border-radius: 5rem 0rem 1rem 1rem;
   z-index: 1;
-  outline: 5px solid lime;
+  outline: 5px solid rgb(19, 251, 19);
   width: 0.5rem;
   height: 42%;
   top: 8%;
