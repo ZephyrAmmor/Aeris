@@ -18,7 +18,9 @@ searchBtn.addEventListener('click', () =>{
         return response.json()
       })
       .then(function(response){
+        if (response.data.images.original.url) {
         image.src = response.data.images.original.url
+        } else showError()
       })
       .catch(function(err) {
         error.textContent(`An Error occuered while fetching this data : ${err}`)
@@ -34,3 +36,6 @@ newGif.addEventListener('click',() =>{
         image.src = response.data.images.original.url
     })
 } )
+function showError() {
+    error.textContent('Something Goes wrong, or you are out of API calls')
+}
