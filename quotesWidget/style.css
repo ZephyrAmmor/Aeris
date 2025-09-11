@@ -2,7 +2,7 @@
 
 .quote-holder{
     padding : 1rem;
-    font-size: calc(1rem + 1vw);
+    font-size: calc(1.1rem + 1vw);
     font-family: 'Merienda', 'Literata', system-ui, sans-serif;
     /* background-color: rgba(0,0,0, 0.3); */
     display : flex;
