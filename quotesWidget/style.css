@@ -16,10 +16,9 @@
     gap : 2rem;
     backdrop-filter: blur(1rem);
     color : rgb(255, 255, 255);
-}
-body {
     background: #833AB4;
     background: linear-gradient(90deg,rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 60%, rgba(252, 176, 69, 1) 100%);
-    background-size: cover;
-    background-repeat: no-repeat;
+}
+body {
+    background-color: transparent;
 }
