@@ -10,6 +10,7 @@
     border : 2px solid limegreen;
 }
 body {
+    perspective: 1000px;
     background-color: rgb(20, 20, 20);
     color : hotpink;
     padding : 1rem;
@@ -18,6 +19,11 @@ body {
     align-items: center;
     gap : 3rem;
     justify-content: space-between;
+}
+img{
+    height : 100%;
+    display : block;
+    width : fit-content
 }
 input, button {
     color: inherit;
@@ -29,9 +35,14 @@ input, button {
     font : inherit
 }
 .search-field{
+    perspective: 500px;
     display : flex; 
     gap : 1rem;
     background-color: transparent;
     padding : 0.5rem 2rem;
     border-radius: 0.5rem;
+}
+button:hover {
+    transform: translateZ(5px);
+    cursor: pointer;
 }
